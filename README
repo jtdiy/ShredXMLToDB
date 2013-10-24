@@ -1,0 +1,3 @@
+ShredXMLToDB is a proof of concept Python program that will use a database layout file (ShredXMLToDB.xml) and recursively parse a data file (TSData.xml) to produce SQL database INSERT statements for that data.
+
+USAGE: python Shredder.py

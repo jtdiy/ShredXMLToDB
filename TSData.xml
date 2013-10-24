@@ -1,0 +1,746 @@
+<?xml version="1.0" ?>
+<edidatafile id="HIPAA834" name="Benefit Enrollment and Maintenance">
+	<table id="Table1" name="Table 1 - Header">
+		<segment id="ST" name="Transaction Set Header">
+			<element id="ST01" value="834"/>
+			<element id="ST02" value="0000"/>
+		</segment>
+		<segment id="BGN" name="Beginning Segment">
+			<element id="BGN01" value="00"/>
+			<element id="BGN02" value="00120000001020100430"/>
+			<element id="BGN03" value="20100430"/>
+			<element id="BGN04" value="000000"/>
+			<element id="BGN05" value="CS"/>
+			<element id="BGN06" value=""/>
+			<element id="BGN07" value=""/>
+			<element id="BGN08" value="4"/>
+		</segment>
+		<loop id="L1000A" name="SPONSOR NAME">
+			<segment id="N1" name="Sponsor Name">
+				<element id="N101" value="P5"/>
+				<element id="N102" value="Our Client"/>
+				<element id="N103" value="FI"/>
+				<element id="N104" value="111111111"/>
+			</segment>
+		</loop>
+		<loop id="L1000B" name="PAYER">
+			<segment id="N1" name="Payer">
+				<element id="N101" value="IN"/>
+				<element id="N102" value="Denta Dental"/>
+				<element id="N103" value="FI"/>
+				<element id="N104" value="222222222"/>
+			</segment>
+		</loop>
+		<loop id="L1000C" name="TPA/Broker Name">
+			<segment id="N1" name="TPA/Broker Name">
+				<element id="N101" value="TV"/>
+				<element id="N102" value="CBIZ"/>
+				<element id="N103" value="FI"/>
+				<element id="N104" value="333333333"/>
+			</segment>
+		</loop>
+	</table>
+	<table id="Table2" name="Table 2 - Detail">
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="Y"/>
+				<element id="INS02" value="18"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="462334567"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Smith"/>
+					<element id="NM104" value="Bob"/>
+					<element id="NM105" value="M"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="462334567"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="1010 South Lake"/>
+					<element id="N302" value="Apt 27-J"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="681104"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19580407"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="ESP"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="01"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="462334567"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Smith"/>
+					<element id="NM104" value="Jane"/>
+					<element id="NM105" value="K"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="452663742"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="1010 South Lake"/>
+					<element id="N302" value="Apt 27-J"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="681104"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19610612"/>
+					<element id="DMG03" value="F"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="ESP"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="Y"/>
+				<element id="INS02" value="18"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="474458877"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Churchfield"/>
+					<element id="NM104" value="Biff"/>
+					<element id="NM105" value="C"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="474458877"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="134452 Goldenrod"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="681154"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19620605"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="ESP"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="01"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="474458877"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Churchfield"/>
+					<element id="NM104" value="Babs"/>
+					<element id="NM105" value="L"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="478985412"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="134452 Goldenrod"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="681154"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19631218"/>
+					<element id="DMG03" value="F"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="ESP"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="Y"/>
+				<element id="INS02" value="18"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="587985412"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="MacDonald"/>
+					<element id="NM104" value="Trever"/>
+					<element id="NM105" value="S"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="587985412"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="23551 Mulberry Ct"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="68122-9822"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19800721"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="FAM"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="01"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="587985412"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="MacDonald"/>
+					<element id="NM104" value="Heather"/>
+					<element id="NM105" value="K"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="567891325"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="23551 Mulberry Ct"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="68122-9822"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19790105"/>
+					<element id="DMG03" value="F"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="FAM"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="19"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="587985412"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="MacDonald"/>
+					<element id="NM104" value="Timmy"/>
+					<element id="NM105" value="Q"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="567891325"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="23551 Mulberry Ct"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="68122-9822"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="20030407"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="FAM"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="19"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="587985412"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="MacDonald"/>
+					<element id="NM104" value="Tina"/>
+					<element id="NM105" value="K"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="487965445"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="23551 Mulberry Ct"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="68122-9822"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="20060809"/>
+					<element id="DMG03" value="F"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="FAM"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="19"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="587985412"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="MacDonald"/>
+					<element id="NM104" value="Tyler"/>
+					<element id="NM105" value="H"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="23551 Mulberry Ct"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="68122-9822"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="20100217"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="FAM"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="Y"/>
+				<element id="INS02" value="18"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="C"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="827653765"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Sox"/>
+					<element id="NM104" value="White"/>
+					<element id="NM105" value="C"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="827653765"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="35 Northshore Ave"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Chicago"/>
+					<element id="N402" value="IL"/>
+					<element id="N403" value="68601"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19600714"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="EMP"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="Y"/>
+				<element id="INS02" value="18"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="C"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="834720015"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Twain"/>
+					<element id="NM104" value="Lionel"/>
+					<element id="NM105" value="R"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="834720015"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="22 Twain"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="65115"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19650507"/>
+					<element id="DMG03" value="M"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="E1D"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<loop id="L2000" name="MEMBER LEVEL DETAIL">
+			<segment id="INS" name="Member Level Detail">
+				<element id="INS01" value="N"/>
+				<element id="INS02" value="19"/>
+				<element id="INS03" value="030"/>
+				<element id="INS04" value=""/>
+				<element id="INS05" value="A"/>
+			</segment>
+			<segment id="REF" name="Subscriber Number">
+				<element id="REF01" value="0F"/>
+				<element id="REF02" value="834720015"/>
+			</segment>
+			<loop id="L2100A" name="MEMBER NAME">
+				<segment id="NM1" name="Member Name">
+					<element id="NM101" value="IL"/>
+					<element id="NM102" value="1"/>
+					<element id="NM103" value="Twain"/>
+					<element id="NM104" value="Linda"/>
+					<element id="NM105" value="K"/>
+					<element id="NM106" value=""/>
+					<element id="NM107" value=""/>
+					<element id="NM108" value="34"/>
+					<element id="NM109" value="879751121"/>
+				</segment>
+				<segment id="N3" name="Member Residence Street Address">
+					<element id="N301" value="22 Twain"/>
+				</segment>
+				<segment id="N4" name="Member Residence City, State, ZIP Code">
+					<element id="N401" value="Omaha"/>
+					<element id="N402" value="NE"/>
+					<element id="N403" value="65115"/>
+				</segment>
+				<segment id="DMG" name="Member Demographics">
+					<element id="DMG01" value="D8"/>
+					<element id="DMG02" value="19650607"/>
+					<element id="DMG03" value="F"/>
+				</segment>
+			</loop>
+			<loop id="L2300" name="HEALTH COVERAGE">
+				<segment id="HD" name="Health Coverage">
+					<element id="HD01" value="030"/>
+					<element id="HD02" value=""/>
+					<element id="HD03" value="DEN"/>
+					<element id="HD04" value=""/>
+					<element id="HD05" value="E1D"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="349"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+				<segment id="DTP" name="Health Coverage Dates">
+					<element id="DTP01" value="543"/>
+					<element id="DTP02" value="D8"/>
+					<element id="DTP03" value="20100530"/>
+				</segment>
+			</loop>
+		</loop>
+		<segment id="SE" name="Transaction Set Trailer">
+			<element id="SE01" value="114"/>
+			<element id="SE02" value="0000"/>
+		</segment>
+	</table>
+</edidatafile>

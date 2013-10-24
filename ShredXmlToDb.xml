@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database xpath="." xmlfile="parseddata.xml" ConnectionStr="Data Source=IBANTDB\\IBANTDB2000;Initial Catalog=GroupDatabaseTest;User ID=sa;Password=xxxxx;">
+	<table name="parse_834_transaction_set_historys" xpath="./table[@id='Table1']">
+		<column name="id" keyname="TSHID" />
+		<column name="ST02_transet_control_number"     xpath="./segment[@id='ST']/element[@id='ST02']" />
+		<column name="BGN01_transet_purpose_code"      xpath="./segment[@id='BGN']/element[@id='BGN01']" />
+		<column name="BGN02_transet_identifier_code"   xpath="./segment[@id='BGN']/element[@id='BGN02']" />
+		<column name="BGN03_transet_creation_date"     xpath="./segment[@id='BGN']/element[@id='BGN03']" />
+		<column name="BGN04_transet_creation_time"     xpath="./segment[@id='BGN']/element[@id='BGN04']" />
+		<column name="BGN05_time_zone_code"            xpath="./segment[@id='BGN']/element[@id='BGN05']" />
+		<column name="BGN06_transet_identifier_code_x" xpath="./segment[@id='BGN']/element[@id='BGN06']" />
+		<column name="BGN08_action_code"               xpath="./segment[@id='BGN']/element[@id='BGN08']" />
+		<table name="parse_834_sponsors" xpath="./loop[@id='L1000A']/segment[@id='N1']">
+			<column name="id" keyname="SID" />
+			<column name="tsh_id" keyvalue="TSHID" />
+			<column name="name" 				xpath="./element[@id='N102']" />
+			<column name="id_code_qualifier"	xpath="./element[@id='N103']" />
+			<column name="id_code"				xpath="./element[@id='N104']" />
+		</table>
+		<table name="parse_834_payers" xpath="./loop[@id='L1000B']/segment[@id='N1']">
+			<column name="id" keyname="PID" />
+			<column name="tsh_id" keyvalue="TSHID" />
+			<column name="name" 				xpath="./element[@id='N102']" />
+			<column name="id_code_qualifier"	xpath="./element[@id='N103']" />
+			<column name="id_code"				xpath="./element[@id='N104']" />
+		</table>
+	</table>
+	<table name="parse_834_members" xpath="./table[@id='Table2']/loop[@id='L2000']">
+		<column name="tsh_id" keyvalue="TSHID" />
+		<column name="m_id" keyname="MID" />
+		<column name="maintenance_type_code"   xpath="./segment[@id='INS']/element[@id='INS03']" />
+		<column name="maintenance_reason_code" xpath="./segment[@id='INS']/element[@id='INS04']" />
+		<column name="name_last"               xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM103']" />
+		<column name="name_first"              xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM104']" />
+		<column name="name_middle"             xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM105']" />
+		<column name="name_prefix"             xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM106']" />
+		<column name="name_suffix"             xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM107']" />
+		<column name="id_code_qualifier"       xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM108']" />
+		<column name="id_code"                 xpath="./loop[@id='L2100A']/segment[@id='NM1']/element[@id='NM109']" />
+		<column name="comm_number_qual"        xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER03']" />
+		<column name="comm_number"             xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER04']" />
+		<column name="comm_number_qual2"       xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER05']" />
+		<column name="comm_number2"            xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER06']" />
+		<column name="comm_number_qual3"       xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER07']" />
+		<column name="comm_number3"            xpath="./loop[@id='L2100A']/segment[@id='PER']/element[@id='PER08']" />
+		<column name="address_information"     xpath="./loop[@id='L2100A']/segment[@id='N3']/element[@id='N301']" />
+		<column name="address_information2"    xpath="./loop[@id='L2100A']/segment[@id='N3']/element[@id='N302']" />
+		<column name="city_name"               xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N401']" />
+		<column name="state_or_prov_code"      xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N402']" />
+		<column name="postal_code"             xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N403']" />
+		<column name="country_code"            xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N404']" />
+		<column name="location_qualifier"      xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N405']" /> 
+		<column name="location_identifier"     xpath="./loop[@id='L2100A']/segment[@id='N4']/element[@id='N406']" /> 
+		<column name="birth_date"              xpath="./loop[@id='L2100A']/segment[@id='DMG']/element[@id='DMG02']" /> 
+		<column name="gender"                  xpath="./loop[@id='L2100A']/segment[@id='DMG']/element[@id='DMG03']" /> 
+		<column name="marital_status"          xpath="./loop[@id='L2100A']/segment[@id='DMG']/element[@id='DMG04']" /> 
+		<column name="race_or_ethnicity"       xpath="./loop[@id='L2100A']/segment[@id='DMG']/element[@id='DMG05']" /> 
+		<column name="citizenship_status"      xpath="./loop[@id='L2100A']/segment[@id='DMG']/element[@id='DMG06']" /> 
+		<column name="health_related_code"     xpath="./loop[@id='L2100A']/segment[@id='HLH']/element[@id='HLH01']" /> 
+		<column name="height"                  xpath="./loop[@id='L2100A']/segment[@id='HLH']/element[@id='HLH02']" /> 
+		<column name="weight"                  xpath="./loop[@id='L2100A']/segment[@id='HLH']/element[@id='HLH03']" /> 
+		<column name="mailing_address_information" xpath="./loop[@id='L2100C']/segment[@id='N3']/element[@id='N301']" /> 
+		<column name="mailing_address_information2" xpath="./loop[@id='L2100C']/segment[@id='N3']/element[@id='N302']" /> 
+		<column name="mailing_city_name"          xpath="./loop[@id='L2100C']/segment[@id='N4']/element[@id='N401']" /> 
+		<column name="mailing_state_or_prov_code" xpath="./loop[@id='L2100C']/segment[@id='N4']/element[@id='N402']" /> 
+		<column name="mailing_postal_code"        xpath="./loop[@id='L2100C']/segment[@id='N4']/element[@id='N403']" /> 
+		<column name="mailing_country_code"       xpath="./loop[@id='L2100C']/segment[@id='N4']/element[@id='N404']" /> 
+		<column name="disability_type"         xpath="./loop[@id='L2200']/segment[@id='DSB']/element[@id='DSB01']" /> 
+		<column name="disability_esrd_flag"    xpath="./loop[@id='L2200']/segment[@id='DSB']/element[@id='DSB08']" /> 
+		<column name="disability_start"        xpath="./loop[@id='L2200']/segment[@id='DTP']/element[@id='DTP01'][@value='360']/../element[@id='DTP03']" /> 
+		<column name="death_date"              xpath="./segment[@id='INS']/element[@id='INS12']" />
+		<column name="medicare_plan_code"      xpath="./segment[@id='INS']/element[@id='INS06']" />
+		<column name="medicare_begin"          xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='338']/../element[@id='DTP03']" /> 
+		<column name="medicare_end"            xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='339']/../element[@id='DTP03']" /> 
+		<column name="education_begin"          xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='350']/../element[@id='DTP03']" /> 
+		<column name="education_end"            xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='351']/../element[@id='DTP03']" /> 
+		<column name="medicaid_begin"          xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='473']/../element[@id='DTP03']" /> 
+		<column name="medicaid_end"            xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='474']/../element[@id='DTP03']" /> 
+		<column name="birth_sequence_number"   xpath="./segment[@id='INS']/element[@id='INS17']" />
+		<column name="handicap"                xpath="./segment[@id='INS']/element[@id='INS10']" />
+		<table name="parse_834_sponsored_members" xpath=".">
+			<column name="id" keyname="SMID" />
+			<column name="member_id" keyvalue="MID" />
+			<column name="tsh_id"  keyvalue="TSHID" />
+			<column name="family_id"                xpath="./segment[@id='REF'][@name='Subscriber Number']/element[@id='REF02']" />
+			<column name="relationship_code"        xpath="./segment[@id='INS']/element[@id='INS02']" />
+			<column name="subscriber_indicator"     xpath="./segment[@id='INS']/element[@id='INS01']" />
+			<column name="benefit_status"           xpath="./segment[@id='INS']/element[@id='INS05']" />
+			<column name="cobra_qualifying_event"   xpath="./segment[@id='INS']/element[@id='INS07']" />
+			<column name="employment_status"        xpath="./segment[@id='INS']/element[@id='INS08']" />
+			<column name="student_status"           xpath="./segment[@id='INS']/element[@id='INS09']" />
+			<column name="prior_coverage_month_count" xpath="./segment[@id='REF']/element[@id='REF01'][@value='QQ']/../element[@id='REF02']" />
+			<column name="income_frequency_code"    xpath="./loop[@id='L2100A']/segment[@id='ICM']/element[@id='ICM01']" /> 
+			<column name="wage_amount"              xpath="./loop[@id='L2100A']/segment[@id='ICM']/element[@id='ICM02']" /> 
+			<column name="work_hours_count"         xpath="./loop[@id='L2100A']/segment[@id='ICM']/element[@id='ICM03']" /> 
+			<column name="location_id_code"         xpath="./loop[@id='L2100A']/segment[@id='ICM']/element[@id='ICM04']" /> 
+			<column name="salary_grade_code"        xpath="./loop[@id='L2100A']/segment[@id='ICM']/element[@id='ICM05']" /> 
+			<column name="retirement"               xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='286']/../element[@id='DTP03']" /> 
+			<column name="return_to_work"           xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='296']/../element[@id='DTP03']" /> 
+			<column name="date_last_worked"         xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='297']/../element[@id='DTP03']" /> 
+			<column name="enrollment_signature"     xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='300']/../element[@id='DTP03']" /> 
+			<column name="cobra_qe_date"            xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='301']/../element[@id='DTP03']" /> 
+			<column name="employment_begin"         xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='336']/../element[@id='DTP03']" /> 
+			<column name="employment_end"           xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='337']/../element[@id='DTP03']" /> 
+			<column name="cobra_begin"              xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='340']/../element[@id='DTP03']" /> 
+			<column name="cobra_end"                xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='341']/../element[@id='DTP03']" /> 
+			<column name="eligibility_begin"        xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='356']/../element[@id='DTP03']" /> 
+			<column name="eligibility_end"          xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='357']/../element[@id='DTP03']" /> 
+			<column name="adjusted_hire"            xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='383']/../element[@id='DTP03']" /> 
+			<column name="plan_part_suspension"     xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='393']/../element[@id='DTP03']" /> 
+			<column name="rehire"                   xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='394']/../element[@id='DTP03']" /> 
+			<table name="parse_834_member_schools" xpath="./loop[@id='L2100E']">
+				<column name="id" keyname="SchoolID" />
+				<column name="tsh_id"  keyvalue="TSHID" />
+				<column name="member_id" keyvalue="MID" />
+				<column name="org_name"               xpath="./segment[@id='NM1']/element[@id='NM103']" />
+				<column name="comm_number_qual"        xpath="./segment[@id='PER']/element[@id='PER03']" />
+				<column name="comm_number"             xpath="./segment[@id='PER']/element[@id='PER04']" />
+				<column name="comm_number_qual2"       xpath="./segment[@id='PER']/element[@id='PER05']" />
+				<column name="comm_number2"            xpath="./segment[@id='PER']/element[@id='PER06']" />
+				<column name="comm_number_qual3"       xpath="./segment[@id='PER']/element[@id='PER07']" />
+				<column name="comm_number3"            xpath="./segment[@id='PER']/element[@id='PER08']" />
+				<column name="address_information" xpath="./segment[@id='N3']/element[@id='N301']" /> 
+				<column name="address_information2" xpath="./segment[@id='N3']/element[@id='N302']" /> 
+				<column name="city_name"          xpath="./segment[@id='N4']/element[@id='N401']" /> 
+				<column name="state_or_prov_code" xpath="./segment[@id='N4']/element[@id='N402']" /> 
+				<column name="postal_code"        xpath="./segment[@id='N4']/element[@id='N403']" /> 
+				<column name="country_code"       xpath="./segment[@id='N4']/element[@id='N404']" /> 
+			</table>
+			<table name="parse_834_coverages" xpath="./loop[@id='L2300']">
+				<column name="id" keyname="CID" />
+				<column name="tsh_id"  keyvalue="TSHID" />
+				<column name="sponsored_member_id" keyvalue="SMID" />
+				<column name="maintenance_type_code"     xpath="./segment[@id='HD']/element[@id='HD01']" />
+				<column name="insurance_line"            xpath="./segment[@id='HD']/element[@id='HD03']" />
+				<column name="plan_coverage_description" xpath="./segment[@id='HD']/element[@id='HD04']" />
+				<column name="coverage_level"            xpath="./segment[@id='HD']/element[@id='HD05']" />
+				<column name="maintenance_effective"     xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='303']/../element[@id='DTP03']" /> 
+				<column name="benefit_begin"             xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='348']/../element[@id='DTP03']" /> 
+				<column name="benefit_end"               xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='349']/../element[@id='DTP03']" /> 
+				<column name="last_premium_paid"         xpath="./segment[@id='DTP']/element[@id='DTP01'][@value='543']/../element[@id='DTP03']" /> 
+				<table name="parse_834_coverage_policy_numbers" xpath="./segment[@id='REF']">
+					<column name="id" keyname="CPCID" />
+					<column name="coverage_id" keyvalue="CID" />
+					<column name="tsh_id"  keyvalue="TSHID" />
+					<column name="policy_number_qualifier"       xpath="./element[@id='REF01']" />
+					<column name="policy_number"                 xpath="./element[@id='REF02']" />
+	 			</table>
+			</table>
+		</table>
+		<table name="parse_834_member_incorrect_ids" xpath="./loop[@id='L2100B']">
+			<column name="id" keyname="IMID" />
+			<column name="member_id" keyvalue="MID" />
+			<column name="tsh_id"  keyvalue="TSHID" />
+			<column name="name_last"               xpath="./segment[@id='NM1']/element[@id='NM103']" />
+			<column name="name_first"              xpath="./segment[@id='NM1']/element[@id='NM104']" />
+			<column name="name_middle"             xpath="./segment[@id='NM1']/element[@id='NM105']" />
+			<column name="name_prefix"             xpath="./segment[@id='NM1']/element[@id='NM106']" />
+			<column name="name_suffix"             xpath="./segment[@id='NM1']/element[@id='NM107']" />
+			<column name="id_code_qualifier"       xpath="./segment[@id='NM1']/element[@id='NM108']" />
+			<column name="id_code"                 xpath="./segment[@id='NM1']/element[@id='NM109']" />
+			<column name="birth_date"              xpath="./segment[@id='DMG']/element[@id='DMG02']" /> 
+			<column name="gender"                  xpath="./segment[@id='DMG']/element[@id='DMG03']" /> 
+		</table>
+	</table>
+</database>
